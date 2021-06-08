@@ -4,6 +4,7 @@
 --basic-blue: #81B3D2;
 --basic-brown: #766357;
 --basic-grey: #EEEEEE;
+--basic- :#F2F2F2;
 }
 
 body{
@@ -120,5 +121,48 @@ a{
 .copyright .buttom:focus{
   color:var(--basic-black);
   background-color: var(--basic-white);
-
 }
+
+.filter legend{
+  font-size: 16px;
+  line-height: 21px;
+  font-weight: 700;
+}
+
+.filter ul{
+  list-style: none;
+  font-size: 14px;
+  line-height: 21px;
+}
+
+.search li{
+  list-style: none;
+  color:var(--basic-black);
+}
+.hotels-list-item h3{
+  font-size: 21px;
+  line-height: 26px;
+  font-weight: 700;
+}
+
+.hotels-list-item{
+  list-style: none;
+}
+
+.rating{
+  background-color:  #F2F2F2;
+  line-height: 21px;
+}
+
+.reservation{
+  background-color: var(--basic-brown);
+  color:var(--basic-white);
+  font-weight: 700;
+}
+.detail{
+  background-color: var(--basic-blue);
+  font-weight: 700;
+  color:var(--basic-white);
+}
+
+
