@@ -12,6 +12,31 @@
   width: 1200px;
   margin: 0 auto;
 }
+.visually-hidden{
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  border: 0;
+  clip: rect(0 0 0 0);
+}
+.button{
+  padding: 30px 0 30px 0;
+  width: 568px;
+  margin: 0 auto;
+}
+.button {
+  font: inherit;
+  color: var(--basic-white);
+  text-transform: uppercase;
+  font-size: 21px;
+  line-height: 26px;
+  font-weight: 700;
+  background-color: var(--basic-brown);
+  border: none;
+}
 body{
     min-width: 960px;
     margin: 0;
@@ -30,7 +55,6 @@ a{
     text-decoration: none;
 }
 .main-navigation{
-  display: grid;
   margin: 0;
   padding: 0 10px;
   font-size: 14px;
@@ -38,18 +62,15 @@ a{
   color: var(--basic-black);
   background-color: var(--basic-white);
 }
-.main-header-logo{
-position: absolute;
-top: 0;
-left: 50%;
-transform: translateX(-50%);
-z-index: 5;
-}
 .site-navigation{
-  width: 940px;
+  display: flex;
+  justify-content: space-between;
+  height: 40px;
   margin: 0;
-  padding: 0;
+  padding: 0 112px;
   list-style: none;
+  margin-bottom: 10px;
+  align-items: center;
 }
 .site-navigation a{
   color: var(--basic-black);
@@ -58,21 +79,15 @@ z-index: 5;
 .site-navigation a:hover,.site-navigation a:focus{
   background-color: var(--basic-white);
 }
-.site-navigation{
-  margin-bottom: 14px;
-  margin-top: 15px;
+
+.main-header-logo{
+position: absolute;
+top: 0;
+left: 50%;
+transform: translateX(-50%);
+z-index: 5;
 }
 
-.visually-hidden{
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  margin: -1px;
-  padding: 0;
-  overflow: hidden;
-  border: 0;
-  clip: rect(0 0 0 0);
-}
 .preview-img{
   background-image: url(../img/background-main.jpg);
   background-repeat: no-repeat;
@@ -88,7 +103,7 @@ content: "";
 position: absolute;
 left: 0;
 bottom: 0;
-width: 1200px;
+width: 100%;
 height: 57px;
 background: url(../img/white-bar.png) no-repeat 50% 50%;
 }
@@ -126,6 +141,11 @@ background: url(../img/white-bar.png) no-repeat 50% 50%;
   padding: 0;
   list-style: none;
 }
+.clear-list{
+  margin: 0;
+  padding: 0;
+  list-style: ;
+}
 
 .first-reason h2{
 width: 153px;
@@ -135,6 +155,7 @@ font-size: 24px;
 line-height: 21px;
 text-align: center;
 text-transform: uppercase;
+
 }
 .first-reason p{
   text-align: center;
@@ -150,6 +171,7 @@ text-transform: uppercase;
   height: 256px;
   color: white;
   background-color: var(--basic-blue);
+
 }
 
 .features-item-grey{
@@ -161,6 +183,8 @@ text-transform: uppercase;
   display: grid;
 }
 .features-list{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
   padding: 0 0px 81px 0;
   text-align: center;
 }
@@ -249,13 +273,13 @@ text-transform: uppercase;
   width: 380px;
   vertical-align: top;
   box-sizing: border-box;
+  margin-top: 20px;
 }
 .second-reason-image{
   height: 256px;
   padding: 0;
   margin: 0;
 }
-
 
 .interesting h2 {
   font-size: 30px;
@@ -267,27 +291,14 @@ text-transform: uppercase;
   text-align: center;
 }
 
-.button {
-  font: inherit;
-  color: var(--basic-white);
-  text-transform: uppercase;
-  font-size: 21px;
-  line-height: 26px;
-  font-weight: 700;
-  background-color: var(--basic-brown);
-  border: none;
-}
+
 .search-button{
   margin: 0 auto;
   position: relative;
   width: 568px;
   text-align: center;
 }
-.button{
-  padding: 30px 0 30px 0;
-  width: 568px;
-  margin: 0 auto;
-}
+
 .main-footer{
   color: var(--basic-black);
   background-color: var(--basic-white);
@@ -312,22 +323,140 @@ text-transform: uppercase;
   background-color: var(--basic-white);
 }
 
-.filter legend{
+.filter-box{
+  height: 217px;
+  display: flex;
+  flex-direction: row;
+  background-position: center;
+  background-image: url(../img/backgroundhotel.jpg);
+}
+.fieldset-filter{
+  color: var(--basic-white);
+  font-size: 14px;
+  text-transform: uppercase;
+  line-height: 21px;
+  border: 0;
+  margin: 0;
+  padding: 0;
+}
+.legend{
+  font-size: 120px;
+  text-transform: uppercase;
+  color: var(--basic-white);
+}
+.checkbox-wrapper{
+  width: 200px;
+  margin-right: 55px;
+  margin-top: 26px;
+}
+.checkbox-wrapper:first-child{
+margin-left: 45px;
+}
+.fieldset-filter p{
+  padding: 13px 3px 13px 32px;
+  margin: 0px;
+}
+.legend-infrastructure{
+  margin-left: 32px ;
+  font-weight: 700;
   font-size: 16px;
   line-height: 21px;
-  font-weight: 700;
 }
-
-.filter ul{
-  list-style: none;
-  font-size: 14px;
+.legend-live{
+  margin-left: 32px;
+  font-weight: 700;
+  font-size: 16px;
   line-height: 21px;
 }
+.placeholder-color {
+  background: transparent;
+  border: none;
+}
+.placeholder-color::placeholder{
+  color: var(--basic-white);
+}
+.prices{
+position: relative;
+display: flex;
+border-radius: 2px;
+border: 3px solid white;
+height: 30px;
+width: 317px;
+align-items: center;
+}
+.prices::after{
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 3px;
+  height: 22px;
+  background: white;
+  transform: translate(-50%, -50%);
+}
 
+.price-wrapper p{
+  font-size: 16px;
+  line-height: 21px;
+  text-transform: uppercase;
+  margin-top: 26px;
+  margin-bottom: 13px;
+  color: var(--basic-white);
+}
+.price-amount label{
+  text-transform: uppercase;
+  display: inline-block;
+  width: 162px;
+  font-size: 14px;
+  line-height: 38px;
+  cursor: pointer;
+  color: var(--basic-white);
+  text-align: center;
+}
+.price-amount input{
+  width: 40px;
+  height: 12px;
+  font-size: 14px;
+  line-height: 38px;
+  margin: 0;
+  cursor: pointer;
+  background: none;
+  border: none;
+  color: var(--basic-white);
+}
+.price-wrapper{
+  margin-left: 255px;
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 21px;
+}
+.search{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  margin-left: 71px;
+}
+.search strong{
+  font-size: 21px;
+  line-height: 26px;
+  font-weight: 700;
+}
+.search-item{
+  display: grid;
+  grid-template-columns:  1fr 1fr 1fr ;
+  list-style: none;
+}
+.search-arrow{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  list-style: none;
+}
+}
 .search ul{
   list-style: none;
   color:var(--basic-black);
 }
+
 .hotels-list-item h3{
   font-size: 21px;
   line-height: 26px;
@@ -353,5 +482,17 @@ text-transform: uppercase;
   font-weight: 700;
   color:var(--basic-white);
 }
-
+.submit{
+  padding: 7px 35px 8px 36px;
+  margin: 55px;
+  margin-left: 70px;
+  margin-bottom: 3px;
+  background: none;
+  color: var(--basic-white);
+  border: 3px solid white;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 21px;
+  text-transform: uppercase;
+}
 

@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Седона</title>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=PT+Sans+Narrow:400,700&amp;subset=latin,cyrillic;display=swap">
+    <link href="https://fonts.googleapis.com/css2?family=PT+Sans+Narrow:wght@400;700&display=swap" rel="stylesheet">
   <link href="normalize.css" rel="stylesheet">
   <link href="css/style.css" rel="stylesheet">
     <link rel="icon" href="favocinicon.ico">
@@ -24,60 +24,78 @@
 </header>
 
 <main class="container">
-  <section class="filtes">
-    <form class="filter" method="GET" action="https://echo.htmlacademy.ru">
-<fieldset>
- <legend>Инфраструктура:</legend>
-  <ul>
-    <li class="filter-option filter-checkbox">
-        <input class="filter-input-checkbox" type="checkbox" name="pool" id="pool" checked>
+    <form method="GET" action="https://echo.htmlacademy.ru">
+<div class="filter-box">
+        <div class="checkbox-wrapper">
+       <fieldset class="fieldset-filter">
+   <legend class="legend-infrastructure">Инфраструктура:</legend>
+      <p>
+        <input type="checkbox" name="pool" id="pool" checked>
         <label for="pool">БАССЕЙН</label>
-    </li>
-    <li class="filter-option filter-checkbox">
-        <input class="filter-input-checkbox" type="checkbox" name="parking" id="parking">
+      </p>
+
+        <p>
+        <input type="checkbox" name="parking" id="parking">
         <label for="parking">ПАРКОВКА</label>
-    </li>
-    <li class="filter-option filter-checkbox">
-        <input class="filter-input-checkbox" type="checkbox" name="wifi" id="wifi">
+       </p>
+
+       <p>
+        <input type="checkbox" name="wifi" id="wifi">
         <label for="wifi">Wi-Fi</label>
-    </li>
-  </ul>
-</fieldset>
-<fieldset>
-<legend>Тип жилья:</legend>
-<ul>
-    <li class="filter-option filter-checkbox">
-        <input class="filter-input-checkbox" type="checkbox" name="hotel" id="hotel" checked>
-        <label for="hotel">Гостиница</label>
-    </li>
-    <li class="filter-option filter-checkbox">
-        <input class="filter-input-checkbox" type="checkbox" name="motel" id="motel" checked>
-        <label for="motel">Мотель</label>
-    </li>
-    <li class="filter-option filter-checkbox">
-        <input class="filter-input-checkbox" type="checkbox" name="appart" id="appart" checked>
-        <label for="appart">Апартаменты</label>
-    </li>
-</ul>
-</fieldset>
-    <fieldset>
-        <legend>Стоимость в сутки, ₽:</legend>
-        <input type="text" placeholder="от 0"  name="pay">
-        <input type="text" placeholder="До 3000"  name="pay">
+      </p>
     </fieldset>
-<button type="submit">Показать</button>
-</form>
-</section>
-<p><strong>Найдено: 3</strong></p>
+   </div>
+
+ <div class="checkbox-wrapper">
+   <fieldset class="fieldset-filter">
+  <legend class="legend-live">Тип жилья:</legend>
+     <p>
+        <input  type="checkbox" name="hotel" id="hotel" checked>
+        <label for="hotel">Гостиница</label>
+      </p>
+
+       <p>
+        <input type="checkbox" name="motel" id="motel" checked>
+        <label for="motel">Мотель</label>
+      </p>
+    <p>
+        <input  type="checkbox" name="appart" id="appart" checked>
+        <label for="appart">Апартаменты</label>
+    </p>
+   </fieldset>
+  </div>
+
+    <section class="price-wrapper">
+        <p class="">Стоимость в сутки, ₽:</p>
+
+      <div class="prices">
+          <div class="price-amount">
+             <label class="min-price"> от <input class="placeholder-color" type="text" name="low-price" placeholder="0"  >
+           </label>
+          </div>
+
+          <div class="price-amount">
+             <label class="max-price"> до <input class="placeholder-color" type="text" name="hight-price" placeholder="3000" >
+             </label>
+          </div>
+      </div>
+   <button class="submit" type="submit">Показать</button>
+   </section>
+   </div>
+  </form>
+
 <section class="search">
+  <div class="search-element">
+<p><strong>Найдено: 3</strong></p>
     <p>Сортировка:</p>
        <ul class="search-item">
            <li><a href="#">По цене</a></li>
            <li><a href="#">По типу</a></li>
            <li><a href="#">По рейтингу</a></li>
        </ul>
-  <ul>
-    <li>
+      </div>
+  <ul class="search-arrow">
+    <li class="">
        <a>
         <img src="img/searchbyhight.svg" width="11" height="10" alt="searchbyhigh">
        </a>
@@ -88,6 +106,7 @@
       </a>
     </li>
   </ul>
+</div>
 </section>
 <ul class="hotel-list">
     <li class="hotels-list-item">
@@ -132,7 +151,7 @@
       <div class="rating">Рейтинг: 8,9</div>
     </li>
   <li class="hotels-list-item Villas at Poco">
-    <img src="img/vila(1).jpg" width="135" height="90" alt="villas-at-poco ">
+    <img src="img/vila-1.jpg" width="135" height="90" alt="villas-at-poco ">
         <div>
            <h3>Villas at Poco Diablo</h3>
               <section class="star">
