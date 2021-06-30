@@ -84,92 +84,124 @@
    </div>
   </form>
 
-<section class="search">
-  <div class="search-element">
-<p><strong>Найдено: 3</strong></p>
-    <p>Сортировка:</p>
-       <ul class="search-item">
-           <li><a href="#">По цене</a></li>
-           <li><a href="#">По типу</a></li>
-           <li><a href="#">По рейтингу</a></li>
-       </ul>
+ <div class="main-hotels-list">
+    <section class="results">
+      <div class="results-text">
+        <p class="results-found">Найдено: 3</p>
       </div>
-  <ul class="search-arrow">
-    <li class="">
-       <a>
-        <img src="img/searchbyhight.svg" width="11" height="10" alt="searchbyhigh">
-       </a>
-      </li>
-    <li>
-      <a>
-        <img src="img/searchbydown.svg" width="11" height="10" alt="searchbydown">
-      </a>
-    </li>
-  </ul>
-</div>
-</section>
-<ul class="hotel-list">
+       <ul class="sorting-results">
+           <li class="choice-results">Сортировка</li>
+           <li class="selected-result">По цене</li>
+           <li class="underline-result"><a href="#">По типу</a></li>
+           <li class="underline-resilt"><a href="#">По рейтингу</a></li>
+       </ul>
+
+  <div class="search-btn">
+    <button class="result-marker by-high" type="button">
+      <svg width="11" height="10" viewBox="0 0 11 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M5.5 0L0 10H11L5.5 0Z" fill="#CACACA"/>
+        </svg>
+    </button>
+    <button class="result-marker" type="button">
+      <svg width="11" height="10" viewBox="0 0 11 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M5.5 10L0 0H11" fill="#81B3D2"/>
+        </svg>
+    </button>
+  </div>
+ </section>
+ </div>
+
+
+<section class="hotels-wrapper">
+ <ul class="hotel-list">
     <li class="hotels-list-item">
+      <div>
         <img src="img/amara-hotel.jpg" width="135" height="90" alt="Amara resort">
-            <div>
+      </div>
+    <div class="hotels-name">
              <h3>Amara Resort & Spa</h3>
-               <section class="star">
-                 <img src="img/star.svg" width="18" height="17" alt="star">
-                 <img src="img/star.svg" width="18" height="17" alt="star">
-                 <img src="img/star.svg" width="18" height="17" alt="star">
-                 <img src="img/star.svg" width="18" height="17" alt="star">
-               </section>
-            </div>
-       <div>
+
+       <div class="hotels-price">
         <span>Гостиница</span>
         <span>От 4000 ₽</span>
        </div>
-      <div>
+
+      <div class="hotels-links">
          <a class="detail" href="#">Подробнее</a>
-         <a class="reservation" href="#">Забронировать</a>
+         <button class="reservation" type="button">Забронировать</button>
        </div>
-         <div class="rating">Рейтинг: 8,5</div>
-    </li>
-    <li class="hotels-list-item-desert">
-        <img src="img/Desrt-hotel.jpg" width="135" height="90" alt="Desert Quail ">
-           <div>
-             <h3>Desert Quail Inn</h3>
-               <section class="star">
-                <img src="img/star.svg" width="18" height="17" alt="star">
-                <img src="img/star.svg" width="18" height="17" alt="star">
-                <img src="img/star.svg" width="18" height="17" alt="star">
-               </section>
-           </div>
-       <div>
-         <span>Мотель</span>
-         <span>От 3000 ₽</span>
-       </div>
-      <div>
-        <a class="detail" href="#">Подробнее</a>
-        <a class="reservation" href="#">Забронировать</a>
-      </div>
-      <div class="rating">Рейтинг: 8,9</div>
-    </li>
-  <li class="hotels-list-item Villas at Poco">
-    <img src="img/vila-1.jpg" width="135" height="90" alt="villas-at-poco ">
-        <div>
-           <h3>Villas at Poco Diablo</h3>
+    </div>
+
+       <div class="hotels-star">
               <section class="star">
                 <img src="img/star.svg" width="18" height="17" alt="star">
                 <img src="img/star.svg" width="18" height="17" alt="star">
-               </section>
-        </div>
+                <img src="img/star.svg" width="18" height="17" alt="star">
+                <img src="img/star.svg" width="18" height="17" alt="star">
+             </section>
+         <p>Рейтинг: 8,5</p>
+      </div>
+    </li>
+
+
+    <li class="hotels-list-item">
       <div>
+        <img src="img/Desrt-hotel.jpg" width="135" height="90" alt="Desert Quail ">
+      </div>
+
+  <div class="hotels-name">
+             <h3>Desert Quail Inn</h3>
+
+       <div class="hotels-price">
+         <span>Мотель</span>
+         <span>От 3000 ₽</span>
+       </div>
+
+       <div class="hotels-links">
+        <a class="detail" href="#">Подробнее</a>
+        <button class="reservation" type="button">Забронировать</button>
+      </div>
+   </div>
+
+    <div class="hotels-star">
+       <section class="star">
+        <img src="img/star.svg" width="18" height="17" alt="star">
+        <img src="img/star.svg" width="18" height="17" alt="star">
+        <img src="img/star.svg" width="18" height="17" alt="star">
+       </section>
+      <p>Рейтинг: 8,9</p>
+    </div>
+    </li>
+
+
+  <li class="hotels-list-item">
+    <div>
+    <img src="img/vila-1.jpg" width="135" height="90" alt="villas-at-poco ">
+  </div>
+  <div class="hotels-name">
+           <h3>Villas at Poco Diablo</h3>
+
+      <div class="hotels-price">
        <span>Апартаменты</span>
        <span>От 2000 ₽</span>
       </div>
-      <div>
+
+      <div class="hotels-links">
          <a class="detail" href="#">Подробнее</a>
          <a class="reservation" href="#">Забронировать</a>
        </div>
-    <div class="rating">Рейтинг: 9,2</div>
- </li>
-</ul>
+  </div>
+
+    <div class="hotels-star">
+       <section class="star">
+        <img src="img/star.svg" width="18" height="17" alt="star">
+        <img src="img/star.svg" width="18" height="17" alt="star">
+       </section>
+       <p>Рейтинг: 9,2</p>
+    </div>
+  </li>
+ </ul>
+</section>
 </main>
 
 <footer class="main-footer">
